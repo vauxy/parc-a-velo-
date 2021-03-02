@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Parc a Vélo{% endblock %}
+
+{% block body %}
+      <div class="container">
+          <h1></h1>
+        <table class="table table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Classe</th>
+                <th scope="col">Code RFID</th>
+                <th scope="col">Code-Barres</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+            </tr>
+            </thead>
+        <tbody>
+        {% for eleve in eleves %}
+            <tr>
+                <td>{{ eleve.nom }}</td>
+                <td>{{ eleve.prenom }}</td>
+                <td>{{ eleve.classe }}</td>
+                <td>{{eleve.codeBarre}}</td>
+                <td>{{eleve.codeRFID}}</td>
+                <td>{{ eleve.image }}</td>
+
+                <td>
+                    <a href="{{ path('eleve_show', {'id': eleve.id}) }}" class="btn btn-primary">Détail</a>
+                    <a href="{{ path('eleve_edit', {'id': eleve.id}) }}" class="btn btn-success"> Editer</a>
+                    <a href="{{ path('eleve_delete', {'id': eleve.id}) }}" class="btn btn-danger"> Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

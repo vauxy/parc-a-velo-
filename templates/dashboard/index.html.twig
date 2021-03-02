@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+
+      <div class="container-fluid">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom01">Prénom</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Simon"  required>
+              <div class="valid-feedback">
+                C'est bon!
+              </div>
+              <div class="invalid-feedback">
+                  Renseigner le prénom!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom02">Nom</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Grandvaux"  required>
+              <div class="valid-feedback">
+                C'est bon!
+              </div>
+              <div class="invalid-feedback">
+                  Renseigner le nom!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationCustomUsername">Classe</label>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="BTS SN 2 " required>
+                <div class="valid-feedback">
+                  C'est bon!
+                </div>
+                <div class="invalid-feedback">
+                  Renseigner la classe!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom03">Code RFID </label>
+              <input type="text" class="form-control" id="validationCustom03" placeholder="65898984" required>
+              <div class="valid-feedback">
+                  C'est bon!
+                </div>
+              <div class="invalid-feedback">
+                Renseigner le code RFID du vélo!
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom04">Code-Barres</label>
+              <input type="text" class="form-control" id="validationCustom04" placeholder="65484984" required>
+              <div class="valid-feedback">
+                  C'est bon!
+                </div>
+              <div class="invalid-feedback">
+                Renseigner le code-barres!
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">Photo</label>
+              <div class="input-group mb-3">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="validationCustom05"  required>
+                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">simon.png</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="inputGroupFileAddon02">Télécharger</span>
+                  </div>
+                  <div class="valid-feedback">
+                  C'est bon!
+                </div>
+                <div class="invalid-feedback">
+                Choisiser une photo!
+              </div>
+                </div> 
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Modifier</button>
+        </form>
+      </div>
+
+{% endblock %}

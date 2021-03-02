@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Eleve{% endblock %}
+
+{% block body %}
+    
+
+    {{ include('eleve/_form.html.twig') }}
+
+    <a href="{{ path('eleve_index') }}">back to list</a>
+{% endblock %}
