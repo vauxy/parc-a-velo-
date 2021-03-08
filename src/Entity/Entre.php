@@ -17,18 +17,9 @@ class Entre
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $date;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $heure;
-
-    /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="boolean", length=255)
      */
     private $velo;
 
@@ -38,41 +29,24 @@ class Entre
      */
     private $eleve;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getDate(): ?string
-    {
-        return $this->date;
-    }
 
-    public function setDate(string $date): self
-    {
-        $this->date = $date;
 
-        return $this;
-    }
-
-    public function getHeure(): ?string
-    {
-        return $this->heure;
-    }
-
-    public function setHeure(string $heure): self
-    {
-        $this->heure = $heure;
-
-        return $this;
-    }
-
-    public function getVelo(): ?string
+    public function getVelo(): ?bool
     {
         return $this->velo;
     }
 
-    public function setVelo(string $velo): self
+    public function setVelo(bool $velo): self
     {
         $this->velo = $velo;
 
@@ -87,6 +61,18 @@ class Entre
     public function setEleve(?Eleve $eleve): self
     {
         $this->eleve = $eleve;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }
