@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EleveRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +48,16 @@ class Eleve
      * @ORM\Column(type="string", length=255)
      */
     private $codeRFID;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Entre::class, mappedBy="eleve")
+     */
+    private $entres;
+
+    public function __construct()
+    {
+        $this->entres = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -120,6 +132,36 @@ class Eleve
     public function setCodeRFID(string $codeRFID): self
     {
         $this->codeRFID = $codeRFID;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Entre[]
+     */
+    public function getEntres(): Collection
+    {
+        return $this->entres;
+    }
+
+    public function addEntre(Entre $entre): self
+    {
+        if (!$this->entres->contains($entre)) {
+            $this->entres[] = $entre;
+            $entre->setEleve($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEntre(Entre $entre): self
+    {
+        if ($this->entres->removeElement($entre)) {
+            // set the owning side to null (unless already changed)
+            if ($entre->getEleve() === $this) {
+                $entre->setEleve(null);
+            }
+        }
 
         return $this;
     }

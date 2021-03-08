@@ -32,6 +32,12 @@ class Entre
      */
     private $velo;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Eleve::class, inversedBy="entres")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $eleve;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Entre
     public function setVelo(string $velo): self
     {
         $this->velo = $velo;
+
+        return $this;
+    }
+
+    public function getEleve(): ?Eleve
+    {
+        return $this->eleve;
+    }
+
+    public function setEleve(?Eleve $eleve): self
+    {
+        $this->eleve = $eleve;
 
         return $this;
     }
