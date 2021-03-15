@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Entre;
 use App\Entity\Eleve;
+use App\Entity\Sortie;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -93,5 +94,14 @@ class AppFixtures extends Fixture
         $entre->setEleve($eleveDeux);
         $manager->persist($entre);
         $manager->flush();
+
+        // Création de mes entrés
+        $sortie = new Sortie();
+        $sortie->setDate(new \DateTime('03/11/2020'));
+        $sortie->setVelo(true);
+        $sortie->setEleve($eleveUn);
+        $manager->persist($sortie);
+        $manager->flush();
+
     }
 }

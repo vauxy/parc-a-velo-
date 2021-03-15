@@ -54,9 +54,15 @@ class Eleve
      */
     private $entres;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Sortie::class, mappedBy="eleve")
+     */
+    private $sortie;
+
     public function __construct()
     {
         $this->entres = new ArrayCollection();
+        $this->sortie = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -160,6 +166,36 @@ class Eleve
             // set the owning side to null (unless already changed)
             if ($entre->getEleve() === $this) {
                 $entre->setEleve(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|sortie[]
+     */
+    public function getSortie(): Collection
+    {
+        return $this->sortie;
+    }
+
+    public function addSortie(sortie $sortie): self
+    {
+        if (!$this->sortie->contains($sortie)) {
+            $this->sortie[] = $sortie;
+            $sortie->setEleve($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSortie(sortie $sortie): self
+    {
+        if ($this->sortie->removeElement($sortie)) {
+            // set the owning side to null (unless already changed)
+            if ($sortie->getEleve() === $this) {
+                $sortie->setEleve(null);
             }
         }
 

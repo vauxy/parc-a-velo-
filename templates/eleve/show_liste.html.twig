@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eleve{% endblock %}
+
+{% block body %}
+<h3 class="p-3 mb-2 bg-primary text-white text-center">{{ eleve.nom }} {{ eleve.prenom }} {{ eleve.classe }}</h3>
+<div class="container">
+
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Heure</th>
+        <th scope="col">Vélo</th>
+    </tr>
+    </thead>
+    <tbody>
+     {% for entre in entres %}
+        <tr class="table-success">
+            <td>{{ entre.date |format_datetime('full', 'none', locale='fr')}}</td>
+            <td> {{ entre.date |format_datetime('none', 'medium', locale='fr') }}</td>
+            <td>
+                {% if entre.velo  %}
+                    <img src="{{asset('logo/bike.png')}}" alt="velo">
+                {% else %}
+                    <img src="{{asset('logo/no-bike.png')}}" alt="no velo">
+                {% endif %}
+            </td>
+
+
+        </tr>
+     {% else %}
+        <tr>
+            <td colspan="6">Aucune donnée</td>
+        </tr>
+    {% endfor %}
+
+     {% for sortie in sorties %}
+        <tr class="table-primary">
+            <td> {{ sortie.date |format_datetime('full', 'none', locale='fr') }}</td>
+            <td> {{ sortie.date |format_datetime('none', 'medium', locale='fr') }}</td>
+            <td>
+                {% if sortie.velo  %}
+                    <img src="{{asset('logo/bike.png')}}" alt="logo Lycee">
+                {% else %}
+                    <img src="{{asset('logo/no-bike.png')}}" alt="no velo">
+                {% endif %}
+            </td>
+        </tr>
+     {% endfor %}
+
+    </tbody>
+</table>
+    <a href="{{ path('eleve_index') }}">Retour</a>
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Parc a Vélo{% endblock %}
+{% block title %}  Parc a Vélo{% endblock %}
 
 {% block body %}
       <div class="container">
@@ -11,19 +11,34 @@
                 <th scope="col">Nom</th>
                 <th scope="col">Prenom</th>
                 <th scope="col">Classe</th>
-                <th scope="col">Heure</th>
-                <th scope="col">Date j/m/a</th>
+                <th scope="col">Date j/m/a | Heure</th>
                 <th scope="col">Vélo</th>
-                
-
             </tr>
             </thead>
         <tbody>
-       
+{#       {{dump(entres)}}#}
+        {% for entre in entres %}
             <tr>
-                <td colspan="6">no records found</td>
+                 <td> {{ entre.eleve.nom }}</td>
+                 <td> {{ entre.eleve.prenom }}</td>
+                 <td> {{ entre.eleve.classe }}</td>
+                 <td>{{ entre.date |format_datetime('full', 'none', locale='fr') }}
+                     {{ entre.date|format_datetime('none', 'short', locale='fr')  }}</td>
+                 <td>
+                     {% if entre.velo  %}
+                       <img src="{{asset('logo/bike.png')}}" alt="logo Lycee">
+                         {% else %}
+                             <img src="{{asset('logo/no-bike.png')}}" alt="no velo">
+                     {% endif %}
+                 </td>
+
+            
             </tr>
-       
+        {% else %}
+            <tr>
+                <td colspan="6">Aucune donnée</td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
 {% endblock %}

@@ -29,7 +29,7 @@
                 <td>{{ eleve.image }}</td>
 
                 <td>
-                    <a href="{{ path('eleve_show', {'id': eleve.id}) }}" class="btn btn-primary">Détail</a>
+                    <a href="{{ path('eleve_show_liste', {'id': eleve.id}) }}" class="btn btn-primary">Détails</a>
                     <a href="{{ path('eleve_edit', {'id': eleve.id}) }}" class="btn btn-success"> Editer</a>
                     <a href="{{ path('eleve_delete', {'id': eleve.id}) }}" class="btn btn-danger"> Supprimer</a>
                 </td>

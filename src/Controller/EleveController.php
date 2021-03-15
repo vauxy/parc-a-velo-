@@ -23,10 +23,10 @@ class EleveController extends AbstractController
         return $this->render('eleve/index.html.twig', [
             'eleves' => $eleveRepository->findAll(),
         ]);
-    }
+}
 
     /**
-     * @Route("/new", name="eleve_new", methods={"GET","POST"})
+     * @Route("/new", name="eleve_new")
      */
     public function new(Request $request): Response
     {
@@ -49,17 +49,7 @@ class EleveController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="eleve_show", methods={"GET"})
-     */
-    public function show(Eleve $eleve): Response
-    {
-        return $this->render('eleve/show.html.twig', [
-            'eleve' => $eleve,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}/edit", name="eleve_edit", methods={"GET","POST"})
+     * @Route("/edit/{id}", name="eleve_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Eleve $eleve): Response
     {
@@ -79,7 +69,7 @@ class EleveController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="eleve_delete", methods={"DELETE"})
+     * @Route("/delete/{id}", name="eleve_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Eleve $eleve): Response
     {
