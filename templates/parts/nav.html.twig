@@ -27,8 +27,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href={{ path('refus_eleve') }}>Refus</a>
             </li>
+            {% if app.user %}
+            <li class="nav-item active ml-10">
+                <a class="nav-link" href={{ path('app_logout') }}>Déconexion</a>
+            </li>
+            {% endif %}
         </ul>
     </div>
+
         <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Chercher">
           <button class="btn btn-outline-dark" type="submit">Chercher</button>

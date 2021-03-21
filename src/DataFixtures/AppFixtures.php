@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Entre;
 use App\Entity\Eleve;
 use App\Entity\Sortie;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -12,13 +13,25 @@ use Symfony\Component\Validator\Constraints\Date;
 
 class AppFixtures extends Fixture
 {
-    public function __construct()
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
     {
-
+        $this->passwordEncoder =$passwordEncoder;
     }
-
     public function load(ObjectManager $manager )
     {
+        // Création d'un utilisateur Admin
+        $admin = new User();
+        $admin->setRoles(['ROLE_ADMIN']);
+        $admin->setEmail('admin@admin.com');
+        $admin->setPassword(
+            $this->passwordEncoder->encodePassword(
+                $admin,
+                'Admin123'
+            )
+        );
+        $manager->persist($admin);
+        $manager->flush();
+
         // Création de plusieurs eleves
         $eleveUn = new Eleve();
         $eleveUn->setNom('admin');
@@ -49,8 +62,6 @@ class AppFixtures extends Fixture
         $eleve->setCodeRFID('wano@admin.com');
         $manager->persist($eleve);
         $manager->flush();
-
-
 
         // Création de mes entrés
         $entre = new Entre();
@@ -105,11 +116,13 @@ class AppFixtures extends Fixture
         $sortie = new Sortie();
         $sortie->setDate(new \DateTime('03/11/2020'));
         $sortie->setVelo(true);
-        $sortie->setEleve($eleveUten);
+        $sortie->setEleve($eleveUn);
         $sortie->setRefus(true);
         $sortie->setCodeRfidRefus('25655655655');
         $manager->persist($sortie);
         $manager->flush();
 
     }
+
+
 }
