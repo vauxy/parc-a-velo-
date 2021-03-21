@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Eleve{% endblock %}
+
+{% block body %}
+    
+<div class="container">
+    {{ include('eleves/_form.html.twig') }}
+
+    <a href="{{ path('eleve_index') }}" class="btn btn-primary">Retour</a>
+</div>
+{% endblock %}

@@ -21,7 +21,7 @@ final class Version20210308093500 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE entre ADD eleve_id INT NOT NULL');
-        $this->addSql('ALTER TABLE entre ADD CONSTRAINT FK_3F20C13FA6CC7B2 FOREIGN KEY (eleve_id) REFERENCES eleve (id)');
+        $this->addSql('ALTER TABLE entre ADD CONSTRAINT FK_3F20C13FA6CC7B2 FOREIGN KEY (eleve_id) REFERENCES eleves (id)');
         $this->addSql('CREATE INDEX IDX_3F20C13FA6CC7B2 ON entre (eleve_id)');
     }
 

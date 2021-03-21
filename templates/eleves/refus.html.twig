@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  Parc a Vélo{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1></h1>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Classe</th>
+            <th scope="col">Date j/m/a</th>
+            <th scope="col">Heure</th>
+            <th scope="col">Vélo</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for refus in entreRefus %}
+            <tr>
+                <td> {{ refus.eleve.nom }}</td>
+                <td> {{ refus.eleve.prenom }}</td>
+                <td> {{ refus.eleve.classe }}</td>
+                <td>{{ refus.date |format_datetime('full', 'none', locale='fr') }}</td>
+                <td>{{ refus.date|format_datetime('none', 'short', locale='fr')  }}</td>
+                <td>{{ refus.codeRfidRefus }}</td>
+
+
+            </tr>
+        {% endfor %}
+        {% for refus in sortiesRefus %}
+            <tr>
+                <td> {{ refus.eleve.nom }}</td>
+                <td> {{ refus.eleve.prenom }}</td>
+                <td> {{ refus.eleve.classe }}</td>
+                <td>{{ refus.date |format_datetime('full', 'none', locale='fr') }}</td>
+                <td>{{ refus.date|format_datetime('none', 'short', locale='fr')  }}</td>
+                <td>{{ refus.codeRfidRefus }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

@@ -17,34 +17,39 @@
     </thead>
     <tbody>
      {% for entre in entres %}
+         {% if entre.refus %}
+             <tr class="table-danger">
+         {% else %}
         <tr class="table-success">
+            {% endif %}
             <td>{{ entre.date |format_datetime('full', 'none', locale='fr')}}</td>
             <td> {{ entre.date |format_datetime('none', 'medium', locale='fr') }}</td>
             <td>
                 {% if entre.velo  %}
                     <img src="{{asset('logo/bike.png')}}" alt="velo">
                 {% else %}
-                    <img src="{{asset('logo/no-bike.png')}}" alt="no velo">
+                    <img src="{{asset('logo/no-bicycle.png')}}" alt="no velo">
                 {% endif %}
             </td>
 
 
         </tr>
-     {% else %}
-        <tr>
-            <td colspan="6">Aucune donnée</td>
-        </tr>
+
     {% endfor %}
 
      {% for sortie in sorties %}
-        <tr class="table-primary">
+         {% if sortie.refus %}
+             <tr class="table-danger">
+         {% else %}
+             <tr class="table-success">
+         {% endif %}
             <td> {{ sortie.date |format_datetime('full', 'none', locale='fr') }}</td>
             <td> {{ sortie.date |format_datetime('none', 'medium', locale='fr') }}</td>
             <td>
                 {% if sortie.velo  %}
                     <img src="{{asset('logo/bike.png')}}" alt="logo Lycee">
                 {% else %}
-                    <img src="{{asset('logo/no-bike.png')}}" alt="no velo">
+                    <img src="{{asset('logo/no-bicycle.png')}}" alt="no velo">
                 {% endif %}
             </td>
         </tr>

@@ -50,12 +50,12 @@ class Eleve
     private $codeRFID;
 
     /**
-     * @ORM\OneToMany(targetEntity=Entre::class, mappedBy="eleve")
+     * @ORM\OneToMany(targetEntity=Entre::class, mappedBy="eleves")
      */
     private $entres;
 
     /**
-     * @ORM\OneToMany(targetEntity=Sortie::class, mappedBy="eleve")
+     * @ORM\OneToMany(targetEntity=Sortie::class, mappedBy="eleves")
      */
     private $sortie;
 

@@ -20,26 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65defa15-e398-44a4-a695-ffddddd57360" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/eleve/show_liste.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/eleve/sortie.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/parc-a-velo-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parc-a-velo-.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/parc-a-velo-/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210211140318.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210211140318.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210211144902.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210211144902.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210308093500.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210308093500.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210311094935.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210311094935.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo/no-bike.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EleveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EleveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EleveController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Eleve.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Eleve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entre.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Sortie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Sortie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/EleveType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EleveType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eleve/entre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleve/entre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eleve/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleve/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eleve/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleve/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/entre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/entre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/show_liste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/show_liste.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleve/sortie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/sortie.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/parts/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/parts/nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,10 +184,10 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\33629\Desktop\parc a velo 2\parc-a-velo-\public\logo" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\33629\Desktop\parc a velo 2\parc-a-velo-\public\logo" />
     </key>
   </component>
@@ -200,7 +204,13 @@
       <workItem from="1615280267034" duration="5835000" />
       <workItem from="1615314946675" duration="2523000" />
       <workItem from="1615447571535" duration="16214000" />
-      <workItem from="1615793154087" duration="4066000" />
+      <workItem from="1615793154087" duration="5012000" />
+      <workItem from="1615811383745" duration="8287000" />
+      <workItem from="1615879248196" duration="5316000" />
+      <workItem from="1616052184197" duration="3456000" />
+      <workItem from="1616173351305" duration="188000" />
+      <workItem from="1616261931697" duration="746000" />
+      <workItem from="1616315259449" duration="3571000" />
     </task>
     <servers />
   </component>
@@ -220,13 +230,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615283809921">
+    <state x="542" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615819552465">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="542" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1615283809921" />
-    <state x="497" y="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1615476318639">
+    <state x="542" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1615819552465" />
+    <state x="478" y="31" width="584" height="801" key="find.popup" timestamp="1615820611296">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="497" y="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.864@0.0.1536.864" timestamp="1615476318639" />
+    <state x="478" y="31" width="584" height="801" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1615820611296" />
+    <state x="497" y="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1615882209130">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="497" y="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.864@0.0.1536.864" timestamp="1615882209130" />
   </component>
 </project>

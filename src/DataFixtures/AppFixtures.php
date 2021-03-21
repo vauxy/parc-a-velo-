@@ -56,6 +56,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('01/11/2020'));
         $entre->setVelo(true);
+        $entre->setRefus(false);
         $entre->setEleve($eleveUn);
         $manager->persist($entre);
         $manager->flush();
@@ -63,6 +64,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('01/01/2021'));
         $entre->setVelo(false);
+        $entre->setRefus(false);
         $entre->setEleve($eleveDeux);
         $manager->persist($entre);
         $manager->flush();
@@ -70,6 +72,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('11/03/2021'));
         $entre->setVelo(true);
+        $entre->setRefus(false);
         $entre->setEleve($eleve);
         $manager->persist($entre);
         $manager->flush();
@@ -77,6 +80,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('01/11/1997'));
         $entre->setVelo(true);
+        $entre->setRefus(false);
         $entre->setEleve($eleveUn);
         $manager->persist($entre);
         $manager->flush();
@@ -84,6 +88,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('02/26/2021'));
         $entre->setVelo(false);
+        $entre->setRefus(false);
         $entre->setEleve($eleveUn);
         $manager->persist($entre);
         $manager->flush();
@@ -91,6 +96,7 @@ class AppFixtures extends Fixture
         $entre = new Entre();
         $entre->setDate(new \DateTime('05/03/2021'));
         $entre->setVelo(true);
+        $entre->setRefus(true);
         $entre->setEleve($eleveDeux);
         $manager->persist($entre);
         $manager->flush();
@@ -99,7 +105,9 @@ class AppFixtures extends Fixture
         $sortie = new Sortie();
         $sortie->setDate(new \DateTime('03/11/2020'));
         $sortie->setVelo(true);
-        $sortie->setEleve($eleveUn);
+        $sortie->setEleve($eleveUten);
+        $sortie->setRefus(true);
+        $sortie->setCodeRfidRefus('25655655655');
         $manager->persist($sortie);
         $manager->flush();
 
