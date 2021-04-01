@@ -27,10 +27,19 @@ class EleveType extends AbstractType
                 'id'=>'labelTitre'
                 ]
             ])
-            ->add('prenom')
-            ->add('classe')
-            ->add('codeBarre')
-            ->add('codeRFID')
+            ->add('prenom',TextType::class,[
+                'label'=> 'Prénom',
+            ])
+            ->add('classe',TextType::class,[
+                'label'=> 'Classe',
+            ])
+            ->add('codeBarre',TextType::class,[
+                'label'=> 'Code-Barres',
+            ])
+            ->add('codeRFID',TextType::class,[
+                'label'=> 'Cdoe RFID',
+                ]
+            )
             ->add('image', FileType::class, [
                 'label' => 'Image (JPG, JPEG, PNG)',
 

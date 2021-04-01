@@ -2,29 +2,29 @@
 
 {% block title %}  Parc a Vélo{% endblock %}
 {% block body %}
-      <div class="container">
-          <h1></h1>
-        <table class="table table-hover">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Classe</th>
-                <th scope="col">Code RFID</th>
-                <th scope="col">Code-Barres</th>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
+<div class="container">
+    <h1></h1>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Classe</th>
+            <th scope="col">Code RFID</th>
+            <th scope="col">Code-Barres</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
 
-            </tr>
-            </thead>
+        </tr>
+        </thead>
         <tbody>
         {% for eleve in eleves %}
             <tr>
                 <td>{{ eleve.nom }}</td>
                 <td>{{ eleve.prenom }}</td>
                 <td>{{ eleve.classe }}</td>
-                <td>{{eleve.codeBarre}}</td>
-                <td>{{eleve.codeRFID}}</td>
+                <td>{{ eleve.codeRFID }}</td>
+                <td>{{ eleve.codeBarre }}</td>
                 <td>{{ eleve.image }}</td>
 
                 <td>
@@ -40,4 +40,4 @@
         {% endfor %}
         </tbody>
     </table>
-{% endblock %}
+    {% endblock %}

@@ -21,9 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="65defa15-e398-44a4-a695-ffddddd57360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/EleveType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EleveType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleves/entre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/entre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleves/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleves/show_liste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/show_liste.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleves/sortie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves/sortie.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/parts/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/parts/nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,10 +168,10 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\33629\Desktop\parc a velo 2\parc-a-velo-\public\logo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\33629\Desktop\parc a velo 2\parc-a-velo-\public\logo" />
     </key>
   </component>
@@ -189,7 +194,11 @@
       <workItem from="1616052184197" duration="3456000" />
       <workItem from="1616173351305" duration="188000" />
       <workItem from="1616261931697" duration="746000" />
-      <workItem from="1616315259449" duration="9851000" />
+      <workItem from="1616315259449" duration="12534000" />
+      <workItem from="1616397839379" duration="4561000" />
+      <workItem from="1616686286499" duration="1988000" />
+      <workItem from="1616702422735" duration="1744000" />
+      <workItem from="1617006051177" duration="3189000" />
     </task>
     <servers />
   </component>

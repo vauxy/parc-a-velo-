@@ -22,7 +22,7 @@ class AppFixtures extends Fixture
         // Création d'un utilisateur Admin
         $admin = new User();
         $admin->setRoles(['ROLE_ADMIN']);
-        $admin->setEmail('admin@admin.com');
+        $admin->setEmail('admin@stjodijon.com');
         $admin->setPassword(
             $this->passwordEncoder->encodePassword(
                 $admin,
